@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Full Screen Map -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Stats Container with Glass Effect -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        android:alpha="0.95"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Stats Grid with Enhanced Visuals -->
+            <LinearLayout
+                android:id="@+id/statsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="4dp"
+                android:background="@drawable/stat_backgound"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Distance Stat with Icon -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/baseline_location_on_24"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/distanceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="0.00"
+                        android:textSize="28dp"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KM"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="@color/primary"
+                        android:padding="4dp"
+                        />
+
+
+                </LinearLayout>
+
+                <!-- Calories Stat with Icon -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/baseline_local_fire_department_24"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/caloriesValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="0"
+                        android:textSize="28dp"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calories"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KCAL"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="@color/primary"
+                        android:padding="4dp"
+                        />
+
+
+                </LinearLayout>
+
+                <!-- Time Stat with Icon -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/baseline_timer_24"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/DurationValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="00.00.00"
+                        android:textSize="28dp"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duration"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="@color/primary"
+                        android:padding="4dp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startStopButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Start Workout"
+                android:textSize="18dp"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/primary_dark"
+                android:letterSpacing="0.1"
+                app:layout_constraintTop_toBottomOf="@id/statsGrid"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
