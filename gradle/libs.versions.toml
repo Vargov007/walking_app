@@ -9,6 +9,7 @@ kotlinxCoroutinesCore = "1.11.0"
 material = "1.14.0"
 activity = "1.13.0"
 constraintlayout = "2.2.1"
+osmdroidWms = "6.1.20"
 playServicesMaps = "20.0.0"
 playServicesLocation = "21.4.0"
 
@@ -22,6 +23,8 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+osmdroid-android = { module = "org.osmdroid:osmdroid-android", version.ref = "osmdroidWms" }
+osmdroid-wms = { module = "org.osmdroid:osmdroid-wms", version.ref = "osmdroidWms" }
 play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 

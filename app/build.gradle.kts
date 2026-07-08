@@ -52,8 +52,8 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.11.0")
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.11.0")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
-    implementation("org.osmdroid:osmdroid-android:6.1.20")
-    implementation("org.osmdroid:osmdroid-wms:6.1.20")
+    implementation(libs.osmdroid.android)
+    implementation(libs.osmdroid.wms)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.play.services.maps)
 
